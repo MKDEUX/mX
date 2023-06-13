@@ -1,0 +1,72 @@
+<div>
+  <oj-form-layout id="formLayout">
+    <!-- Form layout content -->
+  </oj-form-layout>
+
+  <oj-button display="icons" on-oj-action="[[submitInput]]">
+    <span slot="startIcon" class="oj-ux-ico-search"></span>
+    Share
+  </oj-button>
+
+  <div class="table-container">
+    <div class="table-scroll-wrapper">
+      <oj-table
+        id="table"
+        aria-label="Departments Table"
+        accessibility.row-header="ItemNumber"
+        data="{{dataProvider}}"
+        selection-mode='{"row": "multiple", "column": "multiple"}'
+        dnd='{"reorder": {"columns": "enabled"}}'
+        scroll-policy="loadMoreOnScroll"
+        scroll-policy-options='{"fetchSize": 10}'
+        columns='[{"headerText": "ItemNumber", 
+                   "field": "ItemNumber",
+                   "resizable": "enabled",
+                   "id": "ItemNumber"},
+                  {"headerText": "Description", 
+                   "field": "Description",
+                   "resizable": "enabled",
+                   "id": "Description"},
+                  {"headerText": "LotSerial", 
+                   "field": "LotSerial",
+                   "resizable": "enabled",
+                   "id": "LotSerial"},
+                  {"headerText": "QuantityOnHand", 
+                   "field": "QuantityOnHand",
+                   "resizable": "enabled",
+                   "id": "QuantityOnHand"},
+                  {"headerText": "QuantityAvailable", 
+                   "field": "QuantityAvailable",
+                   "resizable": "enabled",
+                   "id": "QuantityAvailable"},
+                  {"headerText": "UM", 
+                   "field": "UM",
+                   "resizable": "enabled",
+                   "id": "UM"}]'
+        class="demo-table-container">
+      </oj-table>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    /* Adjust form layout */
+    #formLayout {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Make table container scrollable */
+    .table-container {
+      overflow-x: auto;
+    }
+
+    /* Adjust table columns */
+    .demo-table-container .oj-table {
+      min-width: 100%;
+      width: auto;
+    }
+  }
+</style>

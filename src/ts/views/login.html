@@ -1,0 +1,43 @@
+<div id="pageContent" class="oj-web-applayout-page">
+  <div class="oj-hybrid-padding">
+    <div class="logoForm">
+      <img src="css/images/Logo_mob.png" alt="Logo mobeex" class="logoHeader oj-responsive-img">
+    </div>
+
+    <div id="container">
+      <oj-form-layout id="myform" max-columns="1" direction="row" class="oj-form-layout-max-cols-1">
+        <oj-input-text id="username" autocomplete="off" required value="{{username}}" label-hint="Username">
+        </oj-input-text>
+        <oj-input-password id="password" autocomplete="off" required value="{{password}}"
+          help.instruction="Enter your password" label-hint="Password" mask-icon="visible"></oj-input-password>
+        <oj-button id="submit" class="button" on-oj-action="[[submit]]" disabled="[[isValid]]">
+          Submit
+        </oj-button>
+      </oj-form-layout>
+    </div>
+  </div>
+</div>
+
+<style>
+ 
+ @media (max-width: 360px) {
+  .oj-form-layout-max-cols-1 .oj-form-control-container {
+    width: 100%;
+  }
+
+  .oj-input-text,
+  .oj-input-password {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .oj-form-layout .oj-form-control {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+
+</style>
+

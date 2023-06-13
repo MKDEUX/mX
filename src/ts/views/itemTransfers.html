@@ -1,0 +1,49 @@
+<div class="oj-hybrid-padding">
+ 
+
+
+  <h2 class="Title"><oj-bind-text value="[[titreIT01]]"></oj-bind-text></h2>
+  <br />
+  <br />
+  <div class="text-center colorDark">
+    <oj-form-layout id="myform" max-columns="2" direction="row">
+      <oj-input-text id="LITM" autocomplete="off" value="{{LITM}}" label-hint="{{labelLITM}}">
+      </oj-input-text>
+      <oj-input-text id="DSC1" autocomplete="off" value="{{DSC1}}" label-hint="{{labelDSC1}}">
+      </oj-input-text>
+    </oj-form-layout>
+    <br />
+    <oj-form-layout id="myform" max-columns="1" direction="row">
+      <oj-input-text id="LOTN" autocomplete="off" value="{{LOTN}}" label-hint="[[labelLOTN]]">
+      </oj-input-text>
+    </oj-form-layout>
+    <br />
+    <oj-form-layout id="myform" max-columns="2" direction="row">
+      <oj-input-text id="MCUF" autocomplete="off" value="{{MCUF}}" label-hint="[[labelMCUF]]">
+      </oj-input-text>
+      <oj-select-single data="[[dataProviderLoc]]" label-hint="{{labelLOCNE1}}" value="{{LOCN}}">
+      </oj-select-single>
+    </oj-form-layout>
+    <br />
+    <oj-form-layout id="myform" max-columns="2" direction="row">
+      <oj-input-text id="MCU" autocomplete="off" value="{{MCU}}" label-hint="[[labelMCU]]">
+      </oj-input-text>
+      <oj-input-text id="LOCNE2" autocomplete="off" value="{{LOCNE2}}" label-hint="[[labelLOCNE2]]">
+      </oj-input-text>
+    </oj-form-layout>
+    <br />
+    <oj-form-layout id="myform" max-columns="2" direction="row">
+      <oj-input-number id="st1ena" value="{{TRQT}}" label-hint="[[labelTRQT]]" min="0" max="{{maxQT}}"
+        step="1"></oj-input-number>
+      <!-- Liste déroulante -->
+      <oj-select-single data="[[dataProvider]]" label-hint="{{labelTRUM}}" value="uom1">
+      </oj-select-single>
+    </oj-form-layout>
+    <br />
+    <br />
+  </div>
+  <oj-button id="Button" class="button1" display="icons" disabled="[[isComplete]]" on-oj-action="[[submit]]">
+    <span slot="startIcon" class="oj-ux-ico-check"></span>
+  </oj-button>
+
+</div>

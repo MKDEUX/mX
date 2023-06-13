@@ -1,0 +1,49 @@
+<div class="oj-hybrid-padding">
+
+  <oj-input-text id="Location" value="{{Location}}" label-hint="Emplacement"></oj-input-text>
+  <oj-input-text id="Branch_Plant" value="{{Branch_Plant}}" label-hint="Magasin"></oj-input-text>
+
+
+  <oj-button id="button1" on-oj-action="[[submitInput]]">Submit</oj-button>
+
+
+  <oj-table id="table" aria-label="Departments Table" accessibility.row-header="ItemNumber" data="{{dataProvider}}"
+    selection-mode='{"row": "multiple", "column": "multiple"}' dnd='{"reorder": {"columns": "enabled"}}'
+    scroll-policy="loadMoreOnScroll" scroll-policy-options='{"fetchSize": 10}' columns='[{"headerText": "ItemNumber", 
+                     "field": "ItemNumber",
+                     "headerClassName": "oj-sm-only-hide",
+                     "className": "oj-sm-only-hide",
+                     "resizable": "enabled",
+                     "id": "ItemNumber"},
+                    {"headerText": "Description", 
+                     "field": "Description",
+                     "resizable": "enabled",
+                     "id": "Description"},
+                    {"headerText": "LotSerial", 
+                     "field": "LotSerial",
+                     "headerClassName": "oj-sm-only-hide",
+                     "className": "oj-sm-only-hide",
+                     "resizable": "enabled",
+                     "id": "LotSerial"},
+                    {"headerText": "QuantityOnHand", 
+                     "field": "QuantityOnHand",
+                     "resizable": "enabled",
+                     "id": "QuantityOnHand"},
+                    {"headerText": "QuantityAvailable", 
+                     "field": "QuantityAvailable",
+                     "headerClassName": "oj-md-down-hide",
+                     "className": "oj-md-down-hide",
+                     "resizable": "enabled",
+                     "id": "QuantityAvailable"},
+                     {"headerText": "UM", 
+                     "field": "UM",
+                     "resizable": "enabled",
+                     "id": "UM"}]' class="demo-table-container"></oj-table>
+
+
+
+
+
+
+
+</div>

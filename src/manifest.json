@@ -1,0 +1,14 @@
+{
+  "name": "MobeeX",
+  "icons": [{
+    "src": "css/images/abeille.png",
+    "type": "image/png",
+    "sizes": "512x512",
+    "purpose": "any"
+  }],
+  "background_color": "#FEEEDF",
+  "theme_color": "#FEEEDF",
+  "start_url": "index.html",
+  "display": "standalone",
+  "orientation": "portrait"
+}

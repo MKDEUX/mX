@@ -1,0 +1,18 @@
+
+<div>
+
+  <oj-input-text id="itemNumber" value="{{itemNumber}}" label-hint="itemNumber"></oj-input-text>
+  <oj-input-text id="BranchPlant" value="{{branchPlant}}" label-hint="Magasin"></oj-input-text>
+
+  <oj-button id="button1" on-oj-action="[[submitInput]]">Submit</oj-button>
+  
+  <oj-table class="demo-table-container" id="table" aria-label="Inventory Table"
+    accessibility.row-header="shortItemNo" filter='[[filterFunction]]' data="[[dataProvider]]"
+    selection-mode='{"row": "multiple", "column": "multiple"}' dnd='{"reorder": {"columns": "enabled"}}'
+    scroll-policy="loadMoreOnScroll" scroll-policy-options='{"fetchSize": 10}' columns='[
+      {"headerText": "location", "field": "z_LOCNE1_62", "headerClassName": "oj-sm-only-hide", "className": "oj-sm-only-hide", "resizable": "enabled", "id": "z_LOCNE1_62Id"},
+      {"headerText": "Lot/Serial Number", "field": "z_LOTN_11", "headerClassName": "oj-sm-only-hide", "className": "oj-sm-only-hide", "resizable": "enabled", "id": "z_LOTN_11Id"},
+      {"headerText": "Quantity on Hand", "field": "z_PQOH_13", "resizable": "enabled", "id": "z_PQOH_13Id"},
+      {"headerText": "Availability", "field": "z_QAVAL_47", "headerClassName": "oj-sm-only-hide", "className": "oj-sm-only-hide", "resizable": "enabled", "id": "z_QAVAL_47Id"}
+    ]' row-template="[[rowTemplate]]" class="demo-table-container">
+  </oj-table>

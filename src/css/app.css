@@ -1,0 +1,208 @@
+/*
+    Document   : override
+    Created on : <date>
+    Author     : <author>
+    Description:
+        This is where any of your application specific styles should be included
+*/
+@media (max-width: 360px) {
+  .oj-form-layout-max-cols-1 .oj-form-control-container {
+    width: 100%;
+  }
+
+  .oj-input-text,
+  .oj-input-password {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .oj-form-layout .oj-form-control {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+.sendOffScreen {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.Title {
+  text-align: center;
+}
+
+.text-center{
+  
+}
+
+body {
+  background-color: #FDF1DC;
+}
+.myform{
+
+}
+
+
+/* --------- Login Page Css --------- */
+
+.button {
+  text-align: right;
+  color: white;
+  margin-left: 55%;
+}
+.button1 {
+  text-align: right;
+  color: white;
+  margin-left: 50%;
+}
+
+#container {
+  margin: 0 auto;
+  max-width: 800px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Placer les cercles en haut à droite et en bas à gauche */
+#container{
+  width:400px;
+  margin:0 auto;
+  margin-top:5%;
+ }
+ .circles {
+  position: relative;
+}
+
+.circle {
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  background-color: #F9CF0B;
+  border-radius: 50%;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.circle--bottom-left {
+  bottom: -100px;
+  left: -100px;
+}
+
+.circle--top-right  {
+  top: -100px;
+  right: -150px;
+}
+/* #container oj-form-layout{
+  width:100%;
+  padding: 30px;
+  border: 1px solid #f1f1f1;
+  background: #FDF1DC;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 50px;
+} */
+#container h1{
+  margin: 0 auto;
+
+ }
+ .logo{
+  width:150px;
+  height: 130px;
+ }
+ .logoForm{
+  text-align: center;
+ }
+ .logoHeader{
+  width:137px;
+  height: 100px;
+  margin: 0 auto;
+ }
+/* End Login Css */
+.oj-web-applayout-header{
+  background-color: #F9CF0B;
+}
+/* Dark mode section */
+body.dark-mode {
+  background-color: #222;
+  color: #fff;
+}
+body.dark-mode #theme-toggle-button {
+  background-color: #222;
+  color: #F9CF0B;
+}
+.dark-mode #theme-toggle-button:hover {
+  background-color: #F9CF0B;
+  color: #222;
+}
+.dark-mode .button {
+  background-color: #fff;
+}
+.dark-mode .button1 {
+  background-color: #fff;
+}
+
+.dark-mode .circle{
+  background-color: #796506
+}
+.dark-mode h1 {
+  color: #fff;
+}
+.dark-mode h2 {
+  color: #fff;
+}
+.dark-mode #Button {
+  color: #fff;
+}
+.dark-mode .colorDark {
+  --oj-text-field-bg-color: #796506;
+  --oj-text-field-border-color: rgb(255, 255, 255);
+  --oj-text-field-text-color: rgb(255, 255, 255);
+}
+.dark-mode .dsc1 oj-label {
+  --oj-label-hint-color: rgb(255, 255, 255);
+}
+
+.dark-mode .navbar {
+  color: #fff;
+}
+.dark-mode #userMenu {
+  background-color: #796506;
+}
+.dark-mode .oj-web-applayout-header{
+  background-color: #796506;
+}
+/* END Dark mode  section */
+
+
+.demo-oracle-icon {
+  width: 137px;
+  height: 18px
+}
+
+.demo-oracle-icon:before {
+  display: inline
+}
+.demo-appheader-avatar {
+  width: 24px;
+  height: 24px
+}
+
+.demo-appheader-avatar:before {
+  content: url("images/avatar_24px.png")
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5),
+(min-resolution: 144dpi),
+(min-resolution: 1.5dppx) {
+  .demo-appheader-avatar:before {
+    content: url("images/avatar_24px_2x.png");
+    -webkit-transform: translate(-25%, -25%) scale(0.5);
+    transform: translate(-25%, -25%) scale(0.5)
+  }
+}
